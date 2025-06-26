@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- In this case, we are in the same domain... you will need to make a change. -->
+    <script src="../bundles/symfonyprofilerspa/load_toolbar_spa.js"></script>
+</head>
+<body>
+
+If everything goes well, you will see the Symfony Profiler toolbar at the bottom of the page after clicking a button..
+<br>
+<input type="button" onclick="fetch('/one').then(response => response.text()).then(data => document.getElementById('textarea').value = data)" value="Fetch /one" />
+<br>
+<input type="button" onclick="fetch('/exception').then(response => response.text()).then(data => document.getElementById('textarea').value = data)" value="Fetch /exception" />
+<br>
+<textarea id="textarea" cols="50"></textarea>
+<br>
+After clicking, you can view the new requests in the profiler toolbar and click on the magnifying glass icon to see more details..
+</body>
+</html>
