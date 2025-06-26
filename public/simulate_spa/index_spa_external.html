@@ -1,20 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symfony Profiler SPA Demo</title>
     <!-- In this case, we are in the same domain... you will need to make a change. -->
     <script src="../bundles/symfonyprofilerspa/load_toolbar_spa.js"></script>
+    <link rel="stylesheet" href="./index_spa_external.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Symfony Profiler SPA Demo</h1>
+            <p class="description">This demo shows how the Symfony Profiler works with Single Page Applications</p>
+        </header>
 
-If everything goes well, you will see the Symfony Profiler toolbar at the bottom of the page after clicking a button..
-<br>
-<input type="button" onclick="fetch('/one').then(response => response.text()).then(data => document.getElementById('textarea').value = data)" value="Fetch /one" />
-<br>
-<input type="button" onclick="fetch('/exception').then(response => response.text()).then(data => document.getElementById('textarea').value = data)" value="Fetch /exception" />
-<br>
-<textarea id="textarea" cols="50"></textarea>
-<br>
-After clicking, you can view the new requests in the profiler toolbar and click on the magnifying glass icon to see more details..
+        <div class="info-box">
+            <p>If everything goes well, you will see the Symfony Profiler toolbar at the bottom of the page after clicking a button.</p>
+        </div>
+
+        <div class="demo-section">
+            <h2>Test API Endpoints</h2>
+            <p>Click the buttons below to make AJAX requests to different endpoints:</p>
+
+            <div class="button-group">
+                <button onclick="fetch('/one').then(response => response.text()).then(data => document.getElementById('textarea').value = data)">
+                    Fetch /one
+                </button>
+
+                <button class="danger" onclick="fetch('/exception').then(response => response.text()).then(data => document.getElementById('textarea').value = data)">
+                    Fetch /exception
+                </button>
+            </div>
+
+            <h3>Response:</h3>
+            <textarea id="textarea" placeholder="Response will appear here..."></textarea>
+        </div>
+
+        <div class="footer-note">
+            <p>After clicking, you can view the new requests in the profiler toolbar and click on the magnifying glass icon to see more details.</p>
+        </div>
+    </div>
 </body>
 </html>

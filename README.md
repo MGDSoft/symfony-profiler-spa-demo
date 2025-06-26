@@ -3,7 +3,9 @@
 This demo uses the [mgdsoft/symfony-profiler-spa](https://github.com/mgdsoft/symfony-profiler-spa) package to integrate the Symfony Profiler with SPAs.
 
 This project demonstrates how to integrate the Symfony Profiler with a Single Page Application (SPA). 
-It shows how to display the Symfony Profiler toolbar in a SPA context, allowing developers to debug AJAX requests made from JavaScript.
+It shows how to display the Symfony Profiler toolbar in a SPA context, allowing developers to debug AJAX requests made from JavaScript without reloading the page.
+
+![mgdsoft/symfony-profiler-spa](docs/img.jpg)
 
 ## Installation
 
